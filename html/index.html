@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Wiki Perso</title>
 </head>
 
@@ -20,8 +25,7 @@
         <nav class="navbar" id="navbar" style="
         display: none;
         transition: all .5s;
-        "
-        >
+        ">
             <ul class="navbar-content">
                 <li class="list-navbar">Commandes git</li>
                 <li class="list-navbar">UML</li>
@@ -42,8 +46,25 @@
         </nav>
     </header>
 
-    <div>
+    <div class="hero-section">
         <!--HERO SECTION PAGE-->
+        <h2>Bienvenue sur mon Wiki Perso !</h2>
+        <p style="font-size: 18px; margin-bottom: 10px; font-weight: semi-bold;">Vous y retrouverez sur ce site: </p>
+        <div class="hero-items-container">
+
+            <div class="hero-items">
+                <img class="hero-items-img" src="/icons/github.svg" alt="github-logo">
+                <p>Les commandes GitHub</p>
+            </div>
+            <div class="hero-items">
+                <img class="hero-items-img" src="/icons/diagram.svg" alt="github-logo">
+                <p>Les diagrammes UML</p>
+            </div>
+            <div class="hero-items">
+                <img class="hero-items-img" src="/icons/db.svg" alt="github-logo">
+                <p>La méthode Merise</p>
+            </div>
+        </div>
     </div>
     <!-- SCRIPT JS FOR NAVBAR AND DARK MODE-->
     <script src="/app.js"></script>
