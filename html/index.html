@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Wiki Perso</title>
+</head>
+
+<body>
+    <header>
+        <div class="title-button">
+            <h1>Wiki</h1>
+            <button class="navbar-button" onclick="navBarState()">
+                <img class="img" src="/icons/menu.svg" alt="menu-button">
+            </button>
+        </div>
+        <!-- NAVBAR HERE-->
+        <nav class="navbar" id="navbar" style="
+        display: none;
+        transition: all .5s;
+        "
+        >
+            <ul class="navbar-content">
+                <li class="list-navbar">Commandes git</li>
+                <li class="list-navbar">UML</li>
+                <li class="list-navbar">Merise</li>
+                <div class="btn-container-navbar">
+                    <li class="list-navbar">
+                        <button>
+                            <img src="/icons/user.svg" alt="a-propos">
+                        </button>
+                    </li>
+                    <li class="list-navbar">
+                        <button>
+                            <img src="/icons/moon.svg" alt="dark-mode">
+                        </button>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <!--HERO SECTION PAGE-->
+    </div>
+    <!-- SCRIPT JS FOR NAVBAR AND DARK MODE-->
+    <script src="/app.js"></script>
+</body>
+
+</html>
