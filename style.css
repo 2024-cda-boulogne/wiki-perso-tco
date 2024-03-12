@@ -43,17 +43,27 @@ CLASS
 .p-1{
   padding: 10px;
 }
+.p-t-1{
+  padding-top: 10px;
+}
 .p-2{
   padding: 20px;
 }
 .p-x-2{
   padding: 0 20px;
 }
+.p-y-2{
+  padding: 20px 0;
+}
 .p-y-1{
   padding: 10px 0;
 }
 .p-x-1{
   padding:0 10px;
+}
+
+.border-b{
+  border-bottom: 1px solid black;
 }
 
 /* END*/
@@ -179,6 +189,16 @@ pre {
   list-style-type: square;
 }
 
+/* DIAGRAM PAGE*/
+.diagram-content p{
+  font-size: 16px;
+}
+
+.diagram-img{
+  max-width: 100%;
+  margin: 20px 0;
+}
+
 /* RESPONSIVE */
 @media (min-width: 1024px) {
   .navbar {
@@ -214,5 +234,13 @@ pre {
   }
   .github-title{
     justify-content: flex-start;
+  }
+  .diagram-content{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .diagram-img{
+    max-width: 40%;
+    margin: 0 20px 0 0; 
   }
 }
