@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=description content="wiki perso">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="title-button">
+            <h1><a href="/html/index.html">Wiki</a></h1>
+            <button class="navbar-button" aria-label="Sidebar" onclick="navBarState()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- NAVBAR HERE-->
+        <nav class="navbar" id="navbar">
+            <ul class="navbar-content">
+                <li class="list-navbar">
+                    <a href="/html/github-commands.html">Commandes git</a>
+                </li>
+                <li class="list-navbar"><a href="/html/uml-diagram.html">UML</a></li>
+                <li class="list-navbar">Merise</li>
+                <li>
+                    <ul class="btn-container-navbar">
+                        <li class="list-navbar">
+                            <button aria-label="À propos">
+                                <i class="fa-solid fa-question"></i>
+                            </button>
+                        </li>
+                        <li class="list-navbar">
+                            <button onclick="setDarkMode()" aria-label="Dark mode">
+                                <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="github-hero-section">
+        <div class="flex github-title">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h2 class="text">Les diagrammes UML</h2>
+        </div>
+        <div class="m-y-1">
+            <p>
+                <em>C'est quoi un diagramme UML ? Un diagramme UML est un moyen de visualiser des systèmes et des
+                    logiciels à l'aide du langage de modélisation unifié (UML). Les ingénieurs logiciels créent des
+                    diagrammes UML pour comprendre la conception, l'architecture du code et la mise en œuvre proposée de
+                    systèmes logiciels complexes.
+                </em>
+            </p>
+        </div>
+        <div class="commands-container">
+            <h3 class="m-y-1">Explications des différents types de diagramme: </h3>
+            <div class="m-y-1">
+                <div class="m-y-1 border-b p-y-1">
+                    <h4 class="m-y-1 p-t-1">Diagramme de séquence: </h4>
+                    <div class="flex m-y-1 flex-column diagram-content">
+                        <img class="diagram-img" src="/pictures/diagramme-sequence.svg.webp" alt="sequence">
+                        <p>Les diagrammes de séquences sont la représentation graphique des interactions entre les
+                            acteurs et le système selon un ordre chronologique dans la formulation Unified Modeling
+                            Language.<br><br>Le diagramme de séquence permet de montrer les interactions d'objets dans
+                            le cadre d'un
+                            scénario d'un diagramme des cas d'utilisation. Dans un souci de simplification, on
+                            représente l'acteur principal à gauche du diagramme, et les acteurs secondaires éventuels à
+                            droite du système. Le but est de décrire comment se déroulent les interactions entre les
+                            acteurs ou objets. <br><br>
+                            La dimension verticale du diagramme représente le temps, permettant de visualiser
+                            l'enchaînement des actions dans le temps, et de spécifier la naissance et la mort d'objets.
+                            Les périodes d'activité des objets sont symbolisées par des rectangles, et ces objets
+                            dialoguent à l'aide de messages.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="m-y-1 border-b p-y-1">
+                    <h4 class="m-y-1 p-t-1">Diagramme de cas d'utilisation: </h4>
+                    <div class="flex m-y-1 flex-column diagram-content">
+                        <img class="diagram-img" src="/pictures/cas-utilisation.webp" alt="cas utilisation">
+                        <p>Les diagrammes de cas d'utilisation (DCU) sont des diagrammes UML utilisés pour une
+                            représentation du comportement fonctionnel d'un système logiciel. Ils sont utiles pour des
+                            présentations auprès de la direction ou des acteurs d'un projet, mais pour le développement,
+                            les cas d'utilisation sont plus appropriés. En effet, un cas d'utilisation (use cases)
+                            représente une unité discrète d'interaction entre un utilisateur (humain ou machine) et un
+                            système. Ainsi, dans un diagramme de cas d'utilisation, les utilisateurs sont appelés
+                            acteurs (actors), et ils apparaissent dans les cas d'utilisation.<br><br>
+                            Ils permettent de décrire l'interaction entre l'acteur et le système. L'idée forte est de
+                            dire que l'utilisateur d'un système logiciel a un objectif quand il utilise le système ! Le
+                            cas d'utilisation est une description des interactions qui vont permettre à l'acteur
+                            d'atteindre son objectif en utilisant le système. Les use case (cas d'utilisation) sont
+                            représentés par une ellipse sous-titrée par le nom du cas d'utilisation (éventuellement le
+                            nom est placé dans l'ellipse). Un acteur et un cas d'utilisation sont mis en relation par
+                            une association représentée par une ligne.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="m-y-1 border-b p-y-1">
+                    <h4 class="m-y-1 p-t-1">Diagramme d'activité: </h4>
+                    <div class="flex m-y-1 flex-column diagram-content">
+                        <img class="diagram-img" src="/pictures/diagramme-activite.webp" alt="cas utilisation">
+                        <p>Les diagrammes d'activités permettent de mettre l'accent sur les traitements. Ils sont donc
+                            particulièrement adaptés à la modélisation du cheminement de flots de contrôle et de flots
+                            de données. Ils permettent ainsi de représenter graphiquement le comportement d'une méthode
+                            ou le déroulement d'un cas d'utilisation.
+                            <br><br>
+                            Les diagrammes d'activités sont relativement proches des diagrammes d'états-transitions dans
+                            leur présentation, mais leur interprétation est sensiblement différente. Les diagrammes
+                            d'états-transitions sont orientés vers des systèmes réactifs, mais ils ne donnent pas une
+                            vision satisfaisante d'un traitement faisant intervenir plusieurs classeurs et doivent être
+                            complétés, par exemple, par des diagrammes de séquence. Au contraire, les diagrammes
+                            d'activités ne sont pas spécifiquement rattachés à un classeur particulier. On peut attacher
+                            un diagramme d'activités à n'importe quel élément de modélisation afin de visualiser,
+                            spécifier, construire ou documenter le comportement de cet élément.
+                            <br><br>
+                            La différence principale entre les diagrammes d'interaction et les diagrammes d'activités
+                            est que les premiers mettent l'accent sur le flot de contrôle d'un objet à l'autre, tandis
+                            que les seconds insistent sur le flot de contrôle d'une activité à l'autre.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="m-y-1 border-b p-y-1">
+                    <h4 class="m-y-1 p-y-1">Diagramme de déploiement: </h4>
+                    <div class="flex m-y-1 flex-column diagram-content">
+                        <img class="diagram-img" src="/pictures/deploiement-diagramme.webp" alt="cas utilisation">
+                        <p>Les diagrammes d'activités permettent de mettre l'accent sur les traitements. Ils sont donc
+                            particulièrement adaptés à la modélisation du cheminement de flots de contrôle et de flots
+                            de données. Ils permettent ainsi de représenter graphiquement le comportement d'une méthode
+                            ou le déroulement d'un cas d'utilisation.
+                            <br><br>
+                            Les diagrammes d'activités sont relativement proches des diagrammes d'états-transitions dans
+                            leur présentation, mais leur interprétation est sensiblement différente. Les diagrammes
+                            d'états-transitions sont orientés vers des systèmes réactifs, mais ils ne donnent pas une
+                            vision satisfaisante d'un traitement faisant intervenir plusieurs classeurs et doivent être
+                            complétés, par exemple, par des diagrammes de séquence. Au contraire, les diagrammes
+                            d'activités ne sont pas spécifiquement rattachés à un classeur particulier. On peut attacher
+                            un diagramme d'activités à n'importe quel élément de modélisation afin de visualiser,
+                            spécifier, construire ou documenter le comportement de cet élément.
+                            <br><br>
+                            La différence principale entre les diagrammes d'interaction et les diagrammes d'activités
+                            est que les premiers mettent l'accent sur le flot de contrôle d'un objet à l'autre, tandis
+                            que les seconds insistent sur le flot de contrôle d'une activité à l'autre.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="m-y-1 border-b p-y-1">
+                    <h4 class="m-y-1 p-y-1">Diagramme de classe: </h4>
+                    <div class="flex m-y-1 flex-column diagram-content">
+                        <img class="diagram-img" src="/pictures/diag-class.webp" alt="cas utilisation">
+                        <p>Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et
+                            les interfaces des systèmes ainsi que leurs relations. Ce diagramme fait partie de la partie
+                            statique d'UML, ne s'intéressant pas aux aspects temporels et dynamiques.
+                            <br><br>
+                            Une classe décrit les responsabilités, le comportement et le type d'un ensemble d'objets.
+                            Les éléments de cet ensemble sont les instances de la classe.
+                            <br><br>
+                            Une classe est un ensemble de fonctions et de données (attributs) qui sont liées ensemble
+                            par un champ sémantique. Les classes sont utilisées dans la programmation orientée objet.
+                            Elles permettent de modéliser un programme et ainsi de découper une tâche complexe en
+                            plusieurs petits travaux simples.
+                            <br><br>
+                            Les classes peuvent être reliées grâce au mécanisme d'héritage qui permet de mettre en
+                            évidence des relations de parenté. D'autres relations sont possibles entre des classes,
+                            représentées par un arc spécifique dans le diagramme de classes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/app.js"></script>
+</body>
+
+</html>
