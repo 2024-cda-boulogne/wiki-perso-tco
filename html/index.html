@@ -19,7 +19,7 @@
     <header>
         <div class="title-button">
             <h1><a href="/html/index.html">Wiki</a></h1>
-            <button class="navbar-button" onclick="navBarState()">
+            <button class="navbar-button" aria-label="Sidebar" onclick="navBarState()">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -32,12 +32,12 @@
                 <li>
                     <ul class="btn-container-navbar">
                         <li class="list-navbar">
-                            <button>
+                            <button aria-label="À propos">
                                 <i class="fa-solid fa-question"></i>
                             </button>
                         </li>
                         <li class="list-navbar">
-                            <button onclick="setDarkMode()">                    
+                            <button onclick="setDarkMode()" aria-label="Dark mode">                    
                                 <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
                             </button>
                         </li>
