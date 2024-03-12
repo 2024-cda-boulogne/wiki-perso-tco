@@ -20,6 +20,10 @@ body {
 ul {
   list-style-type: none;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 .navbar {
   height: 100%;
