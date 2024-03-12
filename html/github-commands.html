@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=description content="wiki perso">
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,7 +19,7 @@
     <header>
         <div class="title-button">
             <h1><a href="/html/index.html">Wiki</a></h1>
-            <button class="navbar-button" onclick="navBarState()">
+            <button class="navbar-button" aria-label="Sidebar" onclick="navBarState()">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -33,12 +34,12 @@
                 <li>
                     <ul class="btn-container-navbar">
                         <li class="list-navbar">
-                            <button>
+                            <button aria-label="À propos">
                                 <i class="fa-solid fa-question"></i>
                             </button>
                         </li>
                         <li class="list-navbar">
-                            <button onclick="setDarkMode()">
+                            <button onclick="setDarkMode()" aria-label="Dark mode">
                                 <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
                             </button>
                         </li>
@@ -67,7 +68,10 @@
                 <h4 class="m-y-1">Git config</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>L’une des commandes git les plus utilisées est git config. On l’utilise pour configurer les préférences de l’utilisateur : son adresse email, l’algorithme utilisé pour diff, le nom d’utilisateur et le format de fichier etc. Par exemple, la commande suivante peut être utilisée pour définir le mail d’un utilisateur:</p>
+                        <p>L’une des commandes git les plus utilisées est git config. On l’utilise pour configurer les
+                            préférences de l’utilisateur : son adresse email, l’algorithme utilisé pour diff, le nom
+                            d’utilisateur et le format de fichier etc. Par exemple, la commande suivante peut être
+                            utilisée pour définir le mail d’un utilisateur:</p>
                         <pre class="m-y-1">git config --global user.email sam@google.com</pre>
                     </li>
                 </ul>
@@ -79,11 +83,13 @@
                         <pre class="m-y-1">git init</pre>
                     </li>
                 </ul>
-                
+
                 <h4 class="m-y-1">Git add</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git add peut être utilisée pour ajouter des fichiers à l’index. Par exemple, la commande suivante ajoutera un fichier nommé temp.txt dans le répertoire local de l’index: </p>
+                        <p>La commande git add peut être utilisée pour ajouter des fichiers à l’index. Par exemple, la
+                            commande suivante ajoutera un fichier nommé temp.txt dans le répertoire local de l’index:
+                        </p>
                         <pre class="m-y-1">git add temp.txt</pre>
                     </li>
                 </ul>
@@ -99,7 +105,8 @@
                 <h4 class="m-y-1">Git clone</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git clone est utilisée pour la vérification des dépôts. Si le dépôt se trouve sur un serveur distant, utilisez: </p>
+                        <p>La commande git clone est utilisée pour la vérification des dépôts. Si le dépôt se trouve sur
+                            un serveur distant, utilisez: </p>
                         <pre class="m-y-1">git clone alex@93.188.160.58:/chemin/vers/dépôt</pre>
                     </li>
                 </ul>
@@ -107,7 +114,8 @@
                 <h4 class="m-y-1">Git commit</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git commit permet de valider les modifications apportées au HEAD. Notez que tout commit ne se fera pas dans le dépôt distant. </p>
+                        <p>La commande git commit permet de valider les modifications apportées au HEAD. Notez que tout
+                            commit ne se fera pas dans le dépôt distant. </p>
                         <pre class="m-y-1">git commit –m “Description du commit”</pre>
                     </li>
                 </ul>
@@ -115,7 +123,8 @@
                 <h4 class="m-y-1">Git status</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git status affiche la liste des fichiers modifiés ainsi que les fichiers qui doivent encore être ajoutés ou validés. Usage: </p>
+                        <p>La commande git status affiche la liste des fichiers modifiés ainsi que les fichiers qui
+                            doivent encore être ajoutés ou validés. Usage: </p>
                         <pre class="m-y-1">git status</pre>
                     </li>
                 </ul>
@@ -123,7 +132,8 @@
                 <h4 class="m-y-1">Git push</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>Git push est une autre commandes GIT de base. Un simple push envoie les modifications locales apportées à la branche principale associée : </p>
+                        <p>Git push est une autre commandes GIT de base. Un simple push envoie les modifications locales
+                            apportées à la branche principale associée : </p>
                         <pre class="m-y-1">git push origin master</pre>
                     </li>
                 </ul>
@@ -131,7 +141,8 @@
                 <h4 class="m-y-1">Git checkout</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git checkout peut être utilisée pour créer des branches ou pour basculer entre elles. Par exemple nous allons créer une branche: </p>
+                        <p>La commande git checkout peut être utilisée pour créer des branches ou pour basculer entre
+                            elles. Par exemple nous allons créer une branche: </p>
                         <pre class="m-y-1">command git checkout -b &lt;nom-branche> </pre>
                     </li>
                 </ul>
@@ -139,7 +150,8 @@
                 <h4 class="m-y-1">Git remote</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>Cette commande remote permet à un utilisateur de se connecter à un dépôt distant. La commande suivante répertorie les dépôts distants actuellement configurés: </p>
+                        <p>Cette commande remote permet à un utilisateur de se connecter à un dépôt distant. La commande
+                            suivante répertorie les dépôts distants actuellement configurés: </p>
                         <pre class="m-y-1">git remote –v</pre>
                     </li>
                     <li>
@@ -151,7 +163,8 @@
                 <h4 class="m-y-1">Branche git</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git branch peut être utilisée pour répertorier, créer ou supprimer des branches. Pour répertorier toutes les branches présentes dans le dépôt, utilisez: </p>
+                        <p>La commande git branch peut être utilisée pour répertorier, créer ou supprimer des branches.
+                            Pour répertorier toutes les branches présentes dans le dépôt, utilisez: </p>
                         <pre class="m-y-1">git branch</pre>
                     </li>
                     <li>
@@ -163,7 +176,8 @@
                 <h4 class="m-y-1">Git pull</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>Pour fusionner toutes les modifications présentes sur le dépôt distant dans le répertoire de travail local, la commande pull est utilisée. Usage: </p>
+                        <p>Pour fusionner toutes les modifications présentes sur le dépôt distant dans le répertoire de
+                            travail local, la commande pull est utilisée. Usage: </p>
                         <pre class="m-y-1">git pull</pre>
                     </li>
                 </ul>
@@ -171,7 +185,8 @@
                 <h4 class="m-y-1">Git merge</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git merge est utilisée pour fusionner une branche dans la branche active. Usage: </p>
+                        <p>La commande git merge est utilisée pour fusionner une branche dans la branche active. Usage:
+                        </p>
                         <pre class="m-y-1">git merge &lt;nom-branche></pre>
                     </li>
                 </ul>
@@ -179,11 +194,13 @@
                 <h4 class="m-y-1">Git diff</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git diff permet de lister les conflits. Pour visualiser les conflits d’un fichier, utilisez </p>
+                        <p>La commande git diff permet de lister les conflits. Pour visualiser les conflits d’un
+                            fichier, utilisez </p>
                         <pre class="m-y-1">git diff --base &lt;nom-fichier></pre>
                     </li>
                     <li>
-                        <p>La commande suivante est utilisée pour afficher les conflits entre les branches à fusionner avant de les fusionner: </p>
+                        <p>La commande suivante est utilisée pour afficher les conflits entre les branches à fusionner
+                            avant de les fusionner: </p>
                         <pre class="m-y-1">git diff &lt;branche-source> &lt;branche-cible></pre>
                     </li>
                     <li>
@@ -195,7 +212,8 @@
                 <h4 class="m-y-1">Git diff</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>La commande git diff permet de lister les conflits. Pour visualiser les conflits d’un fichier, utilisez </p>
+                        <p>La commande git diff permet de lister les conflits. Pour visualiser les conflits d’un
+                            fichier, utilisez </p>
                         <pre class="m-y-1">git diff --base &lt;nom-fichier></pre>
                     </li>
                 </ul>
@@ -203,7 +221,8 @@
                 <h4 class="m-y-1">Git tag</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>Le marquage est utilisé pour marquer des commits spécifiques avec des poignées simples. Un exemple peut être: </p>
+                        <p>Le marquage est utilisé pour marquer des commits spécifiques avec des poignées simples. Un
+                            exemple peut être: </p>
                         <pre class="m-y-1">git tag 1.1.0 &lt;insert-commitID-here></pre>
                     </li>
                 </ul>
@@ -221,7 +240,8 @@
                 <h4 class="m-y-1">Git reset</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>Pour réinitialiser l’index et le répertoire de travail à l’état du dernier commit, la commande git reset est utilisée : </p>
+                        <p>Pour réinitialiser l’index et le répertoire de travail à l’état du dernier commit, la
+                            commande git reset est utilisée : </p>
                         <pre class="m-y-1">git reset --hard HEAD</pre>
                     </li>
                 </ul>
@@ -229,7 +249,8 @@
                 <h4 class="m-y-1">Git rm</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>Git rm peut être utilisé pour supprimer des fichiers de l’index et du répertoire de travail. Usage: </p>
+                        <p>Git rm peut être utilisé pour supprimer des fichiers de l’index et du répertoire de travail.
+                            Usage: </p>
                         <pre class="m-y-1">git rm nomfichier.txt</pre>
                     </li>
                 </ul>
@@ -237,7 +258,8 @@
                 <h4 class="m-y-1">Git stash</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>L’une des moins connues, git stash aide à enregistrer les changements qui ne doivent pas être commit immédiatement. C’est un commit temporaire. Usage: </p>
+                        <p>L’une des moins connues, git stash aide à enregistrer les changements qui ne doivent pas être
+                            commit immédiatement. C’est un commit temporaire. Usage: </p>
                         <pre class="m-y-1">git stash</pre>
                     </li>
                 </ul>
@@ -245,7 +267,8 @@
                 <h4 class="m-y-1">Git fetch</h4>
                 <ul class="flex flex-column p-x-2">
                     <li>
-                        <p>Git fetch permet à un utilisateur d’extraire tous les fichiers du dépôt distant qui ne sont pas actuellement dans le répertoire de travail local. Exemple d’utilisation: </p>
+                        <p>Git fetch permet à un utilisateur d’extraire tous les fichiers du dépôt distant qui ne sont
+                            pas actuellement dans le répertoire de travail local. Exemple d’utilisation: </p>
                         <pre class="m-y-1">git fetch origin</pre>
                     </li>
                 </ul>
