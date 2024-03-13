@@ -37,7 +37,7 @@
                 <li>
                     <ul class="btn-container-navbar">
                         <li class="list-navbar">
-                            <button aria-label="À propos">
+                            <button aria-label="À propos" onclick="openPopUp()">
                                 <i class="fa-solid fa-question"></i>
                             </button>
                         </li>
@@ -51,6 +51,33 @@
             </ul>
         </nav>
     </header>
+    <div id="about-popup" class="about-popup">
+        <button class="popup__close-btn" onclick="closePopUp()"><i class="fa-solid fa-x"></i></button>
+        <div class="popup__content">
+            <p class="m-y-1">Qui suis-je ?</p>
+            <p>
+                Théo.
+                <br>
+                21 ans.
+                <br>
+                Développeur junior.
+                <br>
+                En formation CDA.
+                <br>
+                En recherche de stage.
+                <br>
+                Orienté Full-stack JavaScript, TypeScript.
+            </p>
+            <div class="flex justify-center m-y-1 popup__link__item">
+                <a target="_blank" href="https://github.com/Theo02-12">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a tagret="_blank" href="https://www.linkedin.com/in/th%C3%A9o-couvelard-4089111b5/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
     <section>
         <div class="flex github-title">
             <i class="fa-solid fa-database"></i>
