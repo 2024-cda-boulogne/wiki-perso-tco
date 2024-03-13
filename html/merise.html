@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name=description content="wiki perso">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preload" as="script" href="/app.js">
+    <link rel="preload" as="style" href="/style.css">
+    <!-- <link rel="preload" as="image" href="/pictures/diagramme-sequence.svg.webp"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Wiki Perso</title>
+    <title>Merise</title>
 </head>
 
 <body>
@@ -26,7 +29,9 @@
         <!-- NAVBAR HERE-->
         <nav class="navbar" id="navbar">
             <ul class="navbar-content">
-                <li class="list-navbar"><a href="/html/github-commands.html">Commandes git</a></li>
+                <li class="list-navbar">
+                    <a href="/html/github-commands.html">Commandes git</a>
+                </li>
                 <li class="list-navbar"><a href="/html/uml-diagram.html">UML</a></li>
                 <li class="list-navbar"><a href="/html/merise.html">Merise</a></li>
                 <li>
@@ -46,30 +51,23 @@
             </ul>
         </nav>
     </header>
-
-    <div class="hero-section">
-        <!--HERO SECTION PAGE-->
-        <h2>Bienvenue sur mon Wiki Perso !</h2>
-        <p style="font-size: 18px; margin-bottom: 10px;">Vous y retrouverez sur ce site: </p>
-        <div class="hero-items-container">
-
-            <div class="hero-items">
-                <div class="hero-items-img"><i class="fa-brands fa-github"></i></div>
-                <p>Les commandes GitHub</p>
-            </div>
-            <div class="hero-items">
-                <div class="hero-items-img"><i class="fa-solid fa-diagram-project"></i></div>
-                <p>Les diagrammes UML</p>
-            </div>
-            <div class="hero-items">
-                <div class="hero-items-img">
-                    <i class="fa-solid fa-database"></i>
-                </div>
-                <p>La méthode Merise</p>
-            </div>
+    <section>
+        <div class="flex github-title">
+            <i class="fa-solid fa-database"></i>
+            <h2 class="text">La méthode Merise</h2>
         </div>
-    </div>
-    <!-- SCRIPT JS FOR NAVBAR AND DARK MODE-->
+        <div class="m-y-1">
+            <p>
+                <em>C'est quoi la méthode Merise ? La méthode Merise est une méthodologie de conception et de gestion de
+                    projets informatiques, particulièrement utilisée dans le domaine des systèmes d'information.
+                    Développée en France dans les années 1970 et 1980, elle tire son nom des mots "Méthode d'Etude et de
+                    Réalisation Informatique pour les Systèmes d'Entreprise". Cette méthodologie est largement basée sur
+                    des concepts issus du modèle entité-association, de la programmation structurée, ainsi que sur des
+                    notions de gestion de projet.
+                </em>
+            </p>
+        </div>
+    </section>
     <script src="/app.js"></script>
 </body>
 

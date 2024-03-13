@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name=description content="wiki perso">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preload" as="script" href="/app.js">
+    <link rel="preload" as="style" href="/style.css">
+    <link rel="preload" as="image" href="/pictures/diagramme-sequence.svg.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+    <title>Diagramme UML</title>
 </head>
 
 <body>
@@ -30,7 +33,7 @@
                     <a href="/html/github-commands.html">Commandes git</a>
                 </li>
                 <li class="list-navbar"><a href="/html/uml-diagram.html">UML</a></li>
-                <li class="list-navbar">Merise</li>
+                <li class="list-navbar"><a href="/html/merise.html">Merise</a></li>
                 <li>
                     <ul class="btn-container-navbar">
                         <li class="list-navbar">
@@ -68,7 +71,8 @@
                 <div class="m-y-1 border-b p-y-1">
                     <h4 class="m-y-1 p-t-1">Diagramme de séquence: </h4>
                     <div class="flex m-y-1 flex-column diagram-content">
-                        <img class="diagram-img" src="/pictures/diagramme-sequence.svg.webp" alt="sequence">
+                        <img class="diagram-img" src="/pictures/diagramme-sequence.svg.webp" alt="sequence"
+                            loading="lazy">
                         <p>Les diagrammes de séquences sont la représentation graphique des interactions entre les
                             acteurs et le système selon un ordre chronologique dans la formulation Unified Modeling
                             Language.<br><br>Le diagramme de séquence permet de montrer les interactions d'objets dans
@@ -88,7 +92,8 @@
                 <div class="m-y-1 border-b p-y-1">
                     <h4 class="m-y-1 p-t-1">Diagramme de cas d'utilisation: </h4>
                     <div class="flex m-y-1 flex-column diagram-content">
-                        <img class="diagram-img" src="/pictures/cas-utilisation.webp" alt="cas utilisation">
+                        <img class="diagram-img" src="/pictures/cas-utilisation.webp" alt="cas utilisation"
+                            loading="lazy">
                         <p>Les diagrammes de cas d'utilisation (DCU) sont des diagrammes UML utilisés pour une
                             représentation du comportement fonctionnel d'un système logiciel. Ils sont utiles pour des
                             présentations auprès de la direction ou des acteurs d'un projet, mais pour le développement,
@@ -110,7 +115,8 @@
                 <div class="m-y-1 border-b p-y-1">
                     <h4 class="m-y-1 p-t-1">Diagramme d'activité: </h4>
                     <div class="flex m-y-1 flex-column diagram-content">
-                        <img class="diagram-img" src="/pictures/diagramme-activite.webp" alt="cas utilisation">
+                        <img class="diagram-img" src="/pictures/diagramme-activite.webp" alt="cas utilisation"
+                            loading="lazy">
                         <p>Les diagrammes d'activités permettent de mettre l'accent sur les traitements. Ils sont donc
                             particulièrement adaptés à la modélisation du cheminement de flots de contrôle et de flots
                             de données. Ils permettent ainsi de représenter graphiquement le comportement d'une méthode
@@ -135,7 +141,8 @@
                 <div class="m-y-1 border-b p-y-1">
                     <h4 class="m-y-1 p-y-1">Diagramme de déploiement: </h4>
                     <div class="flex m-y-1 flex-column diagram-content">
-                        <img class="diagram-img" src="/pictures/deploiement-diagramme.webp" alt="cas utilisation">
+                        <img class="diagram-img" src="/pictures/deploiement-diagramme.webp" alt="cas utilisation"
+                            loading="lazy">
                         <p>Les diagrammes d'activités permettent de mettre l'accent sur les traitements. Ils sont donc
                             particulièrement adaptés à la modélisation du cheminement de flots de contrôle et de flots
                             de données. Ils permettent ainsi de représenter graphiquement le comportement d'une méthode
@@ -160,7 +167,7 @@
                 <div class="m-y-1 border-b p-y-1">
                     <h4 class="m-y-1 p-y-1">Diagramme de classe: </h4>
                     <div class="flex m-y-1 flex-column diagram-content">
-                        <img class="diagram-img" src="/pictures/diag-class.webp" alt="cas utilisation">
+                        <img class="diagram-img" src="/pictures/diag-class.webp" alt="cas utilisation" loading="lazy">
                         <p>Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et
                             les interfaces des systèmes ainsi que leurs relations. Ce diagramme fait partie de la partie
                             statique d'UML, ne s'intéressant pas aux aspects temporels et dynamiques.
