@@ -19,6 +19,13 @@ function setDarkMode() {
   }
 }
 
+document
+  .getElementById("navbar-closing")
+  .addEventListener("click", function (e) {
+    if (e.target !== navbar && navbar.style.width === "250px")
+      navbar.style.width = "0";
+  });
+
 function openPopUp() {
   if (navbar.style.width === "250px") navbar.style.width = "0";
   document.getElementById("about-popup").classList.add("active");

@@ -24,29 +24,31 @@
             </button>
         </div>
         <!-- NAVBAR HERE-->
-        <nav class="navbar" id="navbar">
-            <ul class="navbar-content">
-                <li class="list-navbar">
-                    <a href="/html/github-commands.html">Commandes git</a>
-                </li>
-                <li class="list-navbar"><a href="/html/uml-diagram.html">UML</a></li>
-                <li class="list-navbar"><a href="/html/merise.html">Merise</a></li>
-                <li>
-                    <ul class="btn-container-navbar">
-                        <li class="list-navbar">
-                            <button aria-label="À propos" onclick="openPopUp()">
-                                <i class="fa-solid fa-question"></i>
-                            </button>
-                        </li>
-                        <li class="list-navbar">
-                            <button onclick="setDarkMode()" aria-label="Dark mode">
-                                <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div class="navbar__closing" id="navbar-closing">
+            <nav class="navbar" id="navbar">
+                <ul class="navbar-content">
+                    <li class="list-navbar">
+                        <a href="/html/github-commands.html">Commandes git</a>
+                    </li>
+                    <li class="list-navbar"><a href="/html/uml-diagram.html">UML</a></li>
+                    <li class="list-navbar"><a href="/html/merise.html">Merise</a></li>
+                    <li>
+                        <ul class="btn-container-navbar">
+                            <li class="list-navbar">
+                                <button aria-label="À propos" onclick="openPopUp()">
+                                    <i class="fa-solid fa-question"></i>
+                                </button>
+                            </li>
+                            <li class="list-navbar">
+                                <button onclick="setDarkMode()" aria-label="Dark mode">
+                                    <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div id="about-popup" class="about-popup">
         <button class="popup__close-btn" onclick="closePopUp()"><i class="fa-solid fa-x"></i></button>
