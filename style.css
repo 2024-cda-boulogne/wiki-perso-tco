@@ -212,7 +212,7 @@ pre {
   backdrop-filter: blur(15px);
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
@@ -284,5 +284,14 @@ pre {
   .diagram-img {
     max-width: 40%;
     margin: 0 20px 0 0;
+  }
+}
+
+@media (min-width: 728px) {
+  .about-popup {
+    font-size: 30px;
+  }
+  .popup__link__item a {
+    font-size: 60px;
   }
 }
