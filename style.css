@@ -11,58 +11,59 @@ body {
   margin: 0 auto;
   padding: 25px;
   color: #113264;
+  transition: background 0.3s linear;
 }
 /* 
 CLASS
 */
-.flex{
+.flex {
   display: flex;
 }
-.flex-column{
+.flex-column {
   flex-direction: column;
 }
-.justify-center{
+.justify-center {
   justify-content: center;
 }
-.items-center{
+.items-center {
   align-items: center;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.m-1{
+.m-1 {
   margin: 10px;
 }
-.m-y-1{
+.m-y-1 {
   margin: 10px 0;
 }
-.m-x-1{
-  margin:0 10px;
+.m-x-1 {
+  margin: 0 10px;
 }
-.p-1{
+.p-1 {
   padding: 10px;
 }
-.p-t-1{
+.p-t-1 {
   padding-top: 10px;
 }
-.p-2{
+.p-2 {
   padding: 20px;
 }
-.p-x-2{
+.p-x-2 {
   padding: 0 20px;
 }
-.p-y-2{
+.p-y-2 {
   padding: 20px 0;
 }
-.p-y-1{
+.p-y-1 {
   padding: 10px 0;
 }
-.p-x-1{
-  padding:0 10px;
+.p-x-1 {
+  padding: 0 10px;
 }
 
-.border-b{
+.border-b {
   border-bottom: 1px solid black;
 }
 
@@ -75,7 +76,7 @@ CLASS
 ul {
   list-style-type: none;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -90,11 +91,12 @@ a{
   left: 0;
   background-color: #0d1520;
   color: #c2e6ff;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
-.navbar-button, .list-navbar button{
+.navbar-button,
+.list-navbar button {
   background-color: #0d1520;
   padding: 15px;
   color: #c2e6ff;
@@ -111,6 +113,10 @@ button {
   display: flex;
   justify-content: space-between;
 }
+.title-button a {
+  font-size: 30px;
+  font-weight: bold;
+}
 
 .list-navbar {
   padding: 10px;
@@ -120,7 +126,7 @@ button {
   align-items: center;
   text-transform: uppercase;
 }
-.list-navbar button{
+.list-navbar button {
   background-color: #0d1520;
   padding: 15px;
   border-radius: 50px;
@@ -158,18 +164,18 @@ button {
 
 /* GITHUB PAGE*/
 
-.github-hero-section{
+.github-hero-section {
   margin: 40px 0;
 }
-.github-title i{
+.github-title i {
   font-size: 40px;
   margin-right: 20px;
 }
-.github-title{
+.github-title {
   align-items: center;
   margin: 20px 0;
 }
-.commands-container{
+.commands-container {
   margin-top: 30px;
 }
 
@@ -185,16 +191,16 @@ pre {
   margin-bottom: 2.4rem;
 }
 
-.commands-container ul{
+.commands-container ul {
   list-style-type: square;
 }
 
 /* DIAGRAM PAGE*/
-.diagram-content p{
+.diagram-content p {
   font-size: 16px;
 }
 
-.diagram-img{
+.diagram-img {
   max-width: 100%;
   margin: 20px 0;
 }
@@ -232,15 +238,15 @@ pre {
   .hero-items-img {
     max-width: 30%;
   }
-  .github-title{
+  .github-title {
     justify-content: flex-start;
   }
-  .diagram-content{
+  .diagram-content {
     flex-direction: row;
     align-items: flex-start;
   }
-  .diagram-img{
+  .diagram-img {
     max-width: 40%;
-    margin: 0 20px 0 0; 
+    margin: 0 20px 0 0;
   }
 }

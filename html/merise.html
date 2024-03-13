@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=description content="wiki perso">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" as="script" href="/app.js">
+    <link rel="preload" as="style" href="/style.css">
+    <!-- <link rel="preload" as="image" href="/pictures/diagramme-sequence.svg.webp"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Merise</title>
+</head>
+
+<body>
+    <header>
+        <div class="title-button">
+            <a href="/html/index.html">Wiki</a>
+            <button class="navbar-button" aria-label="Sidebar" onclick="navBarState()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- NAVBAR HERE-->
+        <nav class="navbar" id="navbar">
+            <ul class="navbar-content">
+                <li class="list-navbar">
+                    <a href="/html/github-commands.html">Commandes git</a>
+                </li>
+                <li class="list-navbar"><a href="/html/uml-diagram.html">UML</a></li>
+                <li class="list-navbar"><a href="/html/merise.html">Merise</a></li>
+                <li>
+                    <ul class="btn-container-navbar">
+                        <li class="list-navbar">
+                            <button aria-label="À propos">
+                                <i class="fa-solid fa-question"></i>
+                            </button>
+                        </li>
+                        <li class="list-navbar">
+                            <button onclick="setDarkMode()" aria-label="Dark mode">
+                                <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="flex github-title">
+            <i class="fa-solid fa-database"></i>
+            <h1 class="text">La méthode Merise</h1>
+        </div>
+        <div class="m-y-1">
+            <p>
+                <em>C'est quoi la méthode Merise ? La méthode Merise est une méthodologie de conception et de gestion de
+                    projets informatiques, particulièrement utilisée dans le domaine des systèmes d'information.
+                    Développée en France dans les années 1970 et 1980, elle tire son nom des mots "Méthode d'Etude et de
+                    Réalisation Informatique pour les Systèmes d'Entreprise". Cette méthodologie est largement basée sur
+                    des concepts issus du modèle entité-association, de la programmation structurée, ainsi que sur des
+                    notions de gestion de projet.
+                </em>
+            </p>
+        </div>
+        <section>
+            <h2 class="m-y-1">Explications de la méthode Merise: </h2>
+            <div>
+                <h3 class="m-y-1 p-t-1">MCD - Modèle Conceptuel de Données: </h3>
+                <div class="flex m-y-1 flex-column diagram-content">
+                    <img class="diagram-img" src="/pictures/MCD_UML_1.webp" alt="sequence" loading="lazy">
+                    <div>
+
+                        <p>Le MCD est une représentation graphique de haut niveau qui permet facilement et simplement de
+                            comprendre comment les différents éléments sont liés entre eux.
+                            <br><br>
+                            Utilisé assez tôt en conception de base de données, le MCD sert de base de travail et sera
+                            ensuite utilisé par les autres outils de Merise, à savoir le MPD et le MLD. Le MCD constitue
+                            une étape très importante de la modélisation. Si cette tâche est mal réalisée, des erreurs
+                            en cascade se produiront et rejailliront sur le MPD, le MLD et sur la base de données
+                            finale.
+                            <br><br>
+                            Faisant partie de la boîte à outil Merise, le MCD décrit les données utilisées par le
+                            système
+                            d’information et leurs relations. Les informations sont représentées logiquement en
+                            utilisant un
+                            ensemble de règles et de diagrammes codifiés :
+                        </p>
+                        <ul style="display: block; list-style: inherit; padding: 10px;">
+                            <li>Les entités (1 rectangle = 1 objet) ;</li>
+                            <li>Les propriétés (la liste des données de l’entité) ;</li>
+                            <li>Les relations qui expliquent et précisent comment les entités sont reliées entre elles
+                                (les
+                                ovales avec leurs « pattes » qui se rattachent aux entités) ;</li>
+                            <li>Les cardinalités (les petits chiffres au dessus des « pattes »).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="m-y-1 p-t-1">MPD - Modèle Physique des Données: </h3>
+                <div class="flex m-y-1 flex-column diagram-content">
+                    <img class="diagram-img" src="/pictures/mpd-merise-768x288.jpg.webp" alt="sequence" loading="lazy">
+                    <div>
+
+                        <p>L’étape de création du MPD est presque une formalité comparée à la création du MCD. En
+                            s’appuyant sur des règles simples (et qui fonctionnent à tous les coups), l’analyste fait
+                            évoluer sa modélisation de haut niveau pour la transformer en un schéma plus proche des
+                            contraintes des logiciels de bases de données. Il s’agit de préparer l’implémentation dans
+                            un SGBDR.
+                            <br><br>
+                            Concrètement, cette étape permet de construire la structure finale de la base de données
+                            avec les différents liens entre les éléments qui la composent. Pour la peine, on change
+                            aussi de vocabulaire:
+                        </p>
+                        <ul style="display: block; list-style: inherit; padding: 10px;">
+                            <li>Les entités se transforment en tables ;</li>
+                            <li>Les propriétés se transforment en champs (ou attributs) ;</li>
+                            <li>
+                                Les propriétés se trouvant au milieu d’une relation génèrent une nouvelle table ou
+                                glissent vers la table adéquate en fonction des cardinalités de la relation ;
+                            </li>
+                            <li>
+                                Les identifiants se transforment en clés et se retrouvent soulignés. Chaque table
+                                dispose d’au minimum 1 clé dite primaire ;
+                            </li>
+                            <li>
+                                Les relations et les cardinalités se transforment en champs parfois soulignés : il
+                                s’agit de créer des « clés étrangères » reliées à une « clé primaire » dans une autre
+                                table.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="m-y-1 p-t-1">MLD - Modèle Logique des Données: </h3>
+                <div class="flex m-y-1 flex-column diagram-content">
+                    <img class="diagram-img" src="/pictures/ob_402630_mld.webp" alt="sequence" loading="lazy">
+                    <div>
+
+                        <p>Le MLD ou Modèle Logique des Données est simplement la représentation textuelle du MPD. Il
+                            s’agit de la représentation en ligne du schéma représentant la structure de la base de
+                            données. Il n’y a pas de travail poussé à réaliser à cette étape, il s’agit juste
+                            d’appliquer quelques règles toutes simples.
+                            <br><br>
+                            Le MLD est une étape de la méthodologie Merise. C’est une des dernières étapes proposée et
+                            elle permet d’implémenter la base de données en transcrivant le MCD/MPD en instructions SQL
+                            adaptées au SGBDR prévu. Concrètement, le MLD permet de connaître le nombre de tables ainsi
+                            que leurs contraintes (liaisons entre tables) à mettre en œuvre dans une base de données
+                            relationnelle.
+                            <br><br>
+                            Définition de MLD (Merise) : un Modèle Logique des Données (MLD) est une représentation
+                            textuelle de la base de données à informatiser consécutive au travail d’analyse MCD et MPD.
+                            <br><br>
+                            À noter que le MLD prend parfois un R et devient MLDR ou MLD-R : le R signifiant simplement
+                            Relationnel.
+                            <br><br>
+                            Comment réaliser un MLD ?
+                        </p>
+                        <ul style="display: block; list-style: inherit; padding: 10px;">
+                            <li>Chaque ligne représente une table ;</li>
+                            <li>C’est toujours le nom de la table qui est écrit en premier ;</li>
+                            <li>Les champs sont listés entre parenthèses et séparés par des virgules ;</li>
+                            <li>Les clés primaires sont soulignées et placées au début de la liste des champs ;</li>
+                            <li>Les clés étrangères sont préfixées par un dièse.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="m-y-1 p-t-1">MLD - Modèle Logique des Données: </h3>
+                <div class="flex m-y-1 flex-column diagram-content">
+                    <img class="diagram-img" src="/pictures/ob_402630_mld.webp" alt="sequence" loading="lazy">
+                    <div>
+
+                        <p>Le MLD ou Modèle Logique des Données est simplement la représentation textuelle du MPD. Il
+                            s’agit de la représentation en ligne du schéma représentant la structure de la base de
+                            données. Il n’y a pas de travail poussé à réaliser à cette étape, il s’agit juste
+                            d’appliquer quelques règles toutes simples.
+                            <br><br>
+                            Le MLD est une étape de la méthodologie Merise. C’est une des dernières étapes proposée et
+                            elle permet d’implémenter la base de données en transcrivant le MCD/MPD en instructions SQL
+                            adaptées au SGBDR prévu. Concrètement, le MLD permet de connaître le nombre de tables ainsi
+                            que leurs contraintes (liaisons entre tables) à mettre en œuvre dans une base de données
+                            relationnelle.
+                            <br><br>
+                            Définition de MLD (Merise) : un Modèle Logique des Données (MLD) est une représentation
+                            textuelle de la base de données à informatiser consécutive au travail d’analyse MCD et MPD.
+                            <br><br>
+                            À noter que le MLD prend parfois un R et devient MLDR ou MLD-R : le R signifiant simplement
+                            Relationnel.
+                            <br><br>
+                            Comment réaliser un MLD ?
+                        </p>
+                        <ul style="display: block; list-style: inherit; padding: 10px;">
+                            <li>Chaque ligne représente une table ;</li>
+                            <li>C’est toujours le nom de la table qui est écrit en premier ;</li>
+                            <li>Les champs sont listés entre parenthèses et séparés par des virgules ;</li>
+                            <li>Les clés primaires sont soulignées et placées au début de la liste des champs ;</li>
+                            <li>Les clés étrangères sont préfixées par un dièse.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="/app.js"></script>
+</body>
+
+</html>
