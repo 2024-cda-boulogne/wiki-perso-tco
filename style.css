@@ -99,9 +99,13 @@ a {
 .popup__close-btn,
 .list-navbar button {
   background-color: #0d1520;
-  padding: 15px;
+  width: 40px;
+  height: 40px;
   color: #c2e6ff;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
