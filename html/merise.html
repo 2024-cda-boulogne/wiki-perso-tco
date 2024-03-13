@@ -209,6 +209,71 @@
                     </div>
                 </div>
             </div>
+
+            <div>
+                <h3 class="m-y-1 p-t-1">Dictionnaire des données: </h3>
+                <div class="flex m-y-1 flex-column diagram-content">
+                    <img class="diagram-img" src="/pictures/dictionnaire.png" alt="sequence" loading="lazy">
+                    <div>
+
+                        <p>Le dictionnaire des données consiste en une liste structurée et détaillée de toutes les
+                            données pertinentes pour le système d'information en cours de conception. Il documente les
+                            entités, les attributs, les relations et les contraintes qui seront pris en compte dans la
+                            conception du système.
+                            <br><br>
+                            C'est une étape intermédiaire qui peut avoir son importance, surtout si vous êtes plusieurs
+                            à travailler sur une même base de données, d'un volume important.
+                            <br><br>
+
+                            Le dictionnaire des données est un document qui regroupe toutes les données que vous aurez à
+                            conserver dans votre base (et qui figureront donc dans le MCD). Pour chaque donnée, il
+                            indique :
+                            <br><br>
+                        </p>
+                        <ul style="display: block; list-style: inherit; padding: 10px;">
+                            <li>le <b>code mnémonique</b> : il s'agit d'un libellé désignant une donnée (par exemple
+                                «titre_l»
+                                pour le titre d'un livre)</li>
+                            <li>la <b>désignation</b> : il s'agit d'une mention décrivant ce à quoi la donnée correspond
+                                (par
+                                exemple «titre du livre») </li>
+                            <li>le <b>type de données</b>:
+                                <ul style="list-style: circle; padding: 0 20px;">
+                                    <li><b>A ou Alphabétique </b>: lorsque la donnée est uniquement composée de
+                                        caractères
+                                        alphabétiques (de 'A' à 'Z' et de 'a' à 'z'),</li>
+                                    <li>
+                                        <b>N ou Numérique</b> : lorsque la donnée est composée uniquement de nombres
+                                        (entiers
+                                        ou réels),
+                                    </li>
+                                    <li>
+                                        <b>AN ou Alphanumérique</b> : lorsque la donnée peut être composée à la fois de
+                                        caractères alphabétiques et numériques,
+                                    </li>
+                                    <li>
+                                        <b>Date </b>: lorsque la donnée est une date (au format AAAA-MM-JJ),
+                                    </li>
+                                    <li>
+                                        Booléen : Vrai ou Faux ;
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>la taille</b> : elle s'exprime en nombre de caractères ou de chiffres. Dans le cas
+                                d'une
+                                date au format AAAA-JJ-MM, on compte également le nombre de caractères, soit 10
+                                caractères. Pour ce qui est du type booléen, nul besoin de préciser la taille (ceci
+                                dépend de l'implémentation du SGBDR)
+                            </li>
+                            <li>
+                                et parfois des remarques ou observations complémentaires (par exemple si une donnée est
+                                strictement supérieure à 0, etc.).
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </section>
     <script src="/app.js"></script>
