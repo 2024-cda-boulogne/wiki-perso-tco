@@ -11,6 +11,7 @@ body {
   margin: 0 auto;
   padding: 25px;
   color: #113264;
+  transition: background 0.3s linear;
 }
 /* 
 CLASS
@@ -111,6 +112,10 @@ button {
 .title-button {
   display: flex;
   justify-content: space-between;
+}
+.title-button a {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .list-navbar {
