@@ -96,6 +96,7 @@ a {
   padding-top: 60px;
 }
 .navbar-button,
+.popup__close-btn,
 .list-navbar button {
   background-color: #0d1520;
   padding: 15px;
@@ -203,6 +204,41 @@ pre {
 .diagram-img {
   max-width: 100%;
   margin: 20px 0;
+}
+
+/* POPUP */
+
+.about-popup {
+  backdrop-filter: blur(15px);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateX(-150%);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+.popup__content {
+  height: 30%;
+  font-weight: 700;
+}
+.popup__link__item a {
+  font-size: 26px;
+  padding: 0 5px;
+}
+
+.active {
+  transform: translateX(0);
 }
 
 /* RESPONSIVE */
