@@ -132,6 +132,7 @@ button {
 .title-button a {
   font-size: 30px;
   font-weight: bold;
+  z-index: 10;
 }
 
 .list-navbar {
@@ -260,11 +261,16 @@ pre {
 @media (min-width: 1024px) {
   .navbar {
     border: none;
-    position: inherit;
+    position: absolute;
     width: auto !important;
     background: none;
     padding: 0;
     color: inherit;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    right: 0px;
+    top: 10px;
   }
   ul {
     display: flex;
