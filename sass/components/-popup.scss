@@ -1,0 +1,42 @@
+@use "../sass-utils/variables" as v;
+
+.about-popup {
+  backdrop-filter: blur(15px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateX(-150%);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: v.$screen-tablet) {
+    font-size: 30px;
+  }
+  .popup__close-btn {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+  }
+  .popup__content {
+    height: 30%;
+    font-weight: 700;
+  }
+  .popup__link__item {
+    a {
+      font-size: 26px;
+      padding: 0 5px;
+      @media (min-width: v.$screen-tablet) {
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(0);
+}

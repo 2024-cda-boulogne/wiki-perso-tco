@@ -1,0 +1,45 @@
+@use "../sass-utils/variables" as v;
+
+.hero-section {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  margin-top: 20px;
+
+  @media (min-width: v.$screen-laptop) {
+    display: flex;
+  }
+
+  h2 {
+    margin-bottom: 25px;
+  }
+
+  .hero-items-container {
+    @media (min-width: v.$screen-laptop) {
+      display: flex;
+    }
+  }
+
+  .hero-items {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+
+    &-img {
+      font-size: 4em;
+      margin-right: 20px;
+
+      @media (min-width: v.$screen-laptop) {
+        max-width: 30%;
+      }
+    }
+
+    @media (min-width: v.$screen-laptop) {
+      justify-content: flex-start;
+    }
+  }
+}

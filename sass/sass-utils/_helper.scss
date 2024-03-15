@@ -1,0 +1,55 @@
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+
+.m-1 {
+  margin: 10px;
+}
+.m-y-1 {
+  margin: 10px 0;
+}
+.m-x-1 {
+  margin: 0 10px;
+}
+.p-1 {
+  padding: 10px;
+}
+.p-t-1 {
+  padding-top: 10px;
+}
+.p-2 {
+  padding: 20px;
+}
+.p-x-2 {
+  padding: 0 20px;
+}
+.p-y-2 {
+  padding: 20px 0;
+}
+.p-y-1 {
+  padding: 10px 0;
+}
+.p-x-1 {
+  padding: 0 10px;
+}
+
+.border-b {
+  border-bottom: 1px solid black;
+}
+
+.dark {
+  background-color: #0d1520 !important;
+  color: #c2e6ff !important;
+}
