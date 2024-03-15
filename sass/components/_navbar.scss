@@ -1,0 +1,67 @@
+@use "../sass-utils/variables" as v;
+
+.navbar__closing {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: v.$background-dark-mode;
+    color: v.$font-color-dark-mode;
+    overflow: hidden;
+    transition: width 0.5s;
+    padding-top: 60px;
+
+    &-button {
+      z-index: 1;
+
+      @media (min-width: v.$screen-laptop) {
+        display: none;
+      }
+    }
+
+    @media (min-width: v.$screen-laptop) {
+      border: none;
+      position: absolute;
+      width: auto !important;
+      background: none;
+      padding: 0;
+      color: inherit;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      right: 0px;
+      top: 10px;
+    }
+  }
+
+  .list-navbar {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    button {
+      background-color: #0d1520;
+      padding: 15px;
+      border-radius: 50px;
+    }
+
+    :hover {
+      background-color: #5eb1ef;
+    }
+  }
+  .btn-container-navbar {
+    display: flex;
+  }
+}

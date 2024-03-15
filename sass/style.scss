@@ -1,5 +1,7 @@
-@use "styles/button";
-@use "styles/variables" as v;
+@use "./components/button";
+@use "./layout/header";
+@use "./sass-utils/variables" as v;
+@use "./sass-utils/helper";
 
 html {
   margin: 0;

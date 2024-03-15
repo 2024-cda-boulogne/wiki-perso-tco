@@ -1,0 +1,25 @@
+@use "../sass-utils/variables" as v;
+
+ul {
+  list-style-type: none;
+
+  @media (min-width: v.$screen-laptop) {
+    display: flex;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto !important;
+  background-color: rgba(124, 124, 124, 0.1);
+  border-radius: 3px;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding: 10px 20px;
+  margin-bottom: 2.4rem;
+}
