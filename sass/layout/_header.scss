@@ -1,0 +1,31 @@
+@use "../components/navbar";
+@use "../sass-utils/variables" as v;
+
+header {
+  .title-button {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      font-size: 30px;
+      font-weight: bold;
+
+      @media (min-width: v.$screen-tablet) {
+        z-index: 5;
+      }
+    }
+  }
+
+  .navbar-button {
+    z-index: 1;
+    @media (min-width: v.$screen-laptop) {
+      display: none;
+    }
+  }
+
+  @media (min-width: v.$screen-laptop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,14 @@
+@use "../sass-utils/variables" as v;
+
+@mixin button {
+  background-color: v.$background-dark-mode;
+  width: 40px;
+  height: 40px;
+  color: v.$font-color-dark-mode;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
