@@ -2,6 +2,10 @@
 @use "./layout/header";
 @use "./sass-utils/variables" as v;
 @use "./sass-utils/helper";
+@use "./layout/-content.scss";
+@use "./layout/hero";
+@use "./base/typography";
+@use "./components/-popup.scss";
 
 html {
   margin: 0;

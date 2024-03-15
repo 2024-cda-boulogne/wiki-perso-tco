@@ -9,6 +9,17 @@ header {
     a {
       font-size: 30px;
       font-weight: bold;
+
+      @media (min-width: v.$screen-tablet) {
+        z-index: 5;
+      }
+    }
+  }
+
+  .navbar-button {
+    z-index: 1;
+    @media (min-width: v.$screen-laptop) {
+      display: none;
     }
   }
 
