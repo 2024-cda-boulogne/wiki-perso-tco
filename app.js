@@ -9,12 +9,36 @@ function navBarState() {
 }
 
 function setDarkMode() {
-  document.querySelector("body").classList.add("dark");
-
-  if (localStorage.getItem("theme") === "dark") {
-    document.querySelector("body").classList.remove("dark");
+  const body = document.querySelector("body");
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
     localStorage.setItem("theme", "light");
   } else {
+    body.classList.add("dark");
     localStorage.setItem("theme", "dark");
   }
 }
+
+document
+  .getElementById("navbar-closing")
+  .addEventListener("click", function (e) {
+    if (e.target !== navbar && navbar.style.width === "250px")
+      navbar.style.width = "0";
+  });
+
+function openPopUp() {
+  if (navbar.style.width === "250px") navbar.style.width = "0";
+  document.getElementById("about-popup").classList.add("active");
+}
+function closePopUp() {
+  // if (navbar.style.width === "250px") navbar.style.width = "0";
+  document.getElementById("about-popup").classList.remove("active");
+}
+
+// Vérifie si le thème est stocké en local et applique-le au chargement de la page
+document.addEventListener("DOMContentLoaded", function () {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.querySelector("body").classList.add("dark");
+  }
+});

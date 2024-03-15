@@ -11,7 +11,63 @@ body {
   margin: 0 auto;
   padding: 25px;
   color: #113264;
+  transition: background 0.3s linear;
 }
+/* 
+CLASS
+*/
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+
+.m-1 {
+  margin: 10px;
+}
+.m-y-1 {
+  margin: 10px 0;
+}
+.m-x-1 {
+  margin: 0 10px;
+}
+.p-1 {
+  padding: 10px;
+}
+.p-t-1 {
+  padding-top: 10px;
+}
+.p-2 {
+  padding: 20px;
+}
+.p-x-2 {
+  padding: 0 20px;
+}
+.p-y-2 {
+  padding: 20px 0;
+}
+.p-y-1 {
+  padding: 10px 0;
+}
+.p-x-1 {
+  padding: 0 10px;
+}
+
+.border-b {
+  border-bottom: 1px solid black;
+}
+
+/* END*/
 
 .dark {
   background-color: #0d1520 !important;
@@ -20,25 +76,47 @@ body {
 ul {
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+/* HOME PAGE */
 .navbar {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
   background-color: #0d1520;
   color: #c2e6ff;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
-.navbar-button, .list-navbar button{
+
+.navbar__closing {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar-button {
+  z-index: 1;
+}
+.navbar-button,
+.popup__close-btn,
+.list-navbar button {
   background-color: #0d1520;
-  padding: 15px;
+  width: 40px;
+  height: 40px;
   color: #c2e6ff;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -51,6 +129,10 @@ button {
   display: flex;
   justify-content: space-between;
 }
+.title-button a {
+  font-size: 30px;
+  font-weight: bold;
+}
 
 .list-navbar {
   padding: 10px;
@@ -60,7 +142,7 @@ button {
   align-items: center;
   text-transform: uppercase;
 }
-.list-navbar button{
+.list-navbar button {
   background-color: #0d1520;
   padding: 15px;
   border-radius: 50px;
@@ -95,6 +177,86 @@ button {
   font-size: 4em;
   margin-right: 20px;
 }
+
+/* GITHUB PAGE*/
+
+.github-hero-section {
+  margin: 40px 0;
+}
+.github-title i {
+  font-size: 40px;
+  margin-right: 20px;
+}
+.github-title {
+  align-items: center;
+  margin: 20px 0;
+}
+.commands-container {
+  margin-top: 30px;
+}
+
+pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto !important;
+  background-color: rgba(124, 124, 124, 0.1);
+  border-radius: 3px;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding: 10px 20px;
+  margin-bottom: 2.4rem;
+}
+
+.commands-container ul {
+  list-style-type: square;
+}
+
+/* DIAGRAM PAGE*/
+.diagram-content p {
+  font-size: 16px;
+}
+
+.diagram-img {
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+/* POPUP */
+
+.about-popup {
+  backdrop-filter: blur(15px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateX(-150%);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+.popup__content {
+  height: 30%;
+  font-weight: 700;
+}
+.popup__link__item a {
+  font-size: 26px;
+  padding: 0 5px;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+/* RESPONSIVE */
 @media (min-width: 1024px) {
   .navbar {
     border: none;
@@ -126,5 +288,25 @@ button {
   }
   .hero-items-img {
     max-width: 30%;
+  }
+  .github-title {
+    justify-content: flex-start;
+  }
+  .diagram-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .diagram-img {
+    max-width: 40%;
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (min-width: 728px) {
+  .about-popup {
+    font-size: 30px;
+  }
+  .popup__link__item a {
+    font-size: 60px;
   }
 }

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=description content="wiki perso">
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -17,38 +18,68 @@
 <body>
     <header>
         <div class="title-button">
-            <h1>Wiki</h1>
-            <button class="navbar-button" onclick="navBarState()">
+            <a href="/html/index.html">Wiki</a>
+            <button class="navbar-button" aria-label="Sidebar" onclick="navBarState()">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
         <!-- NAVBAR HERE-->
-        <nav class="navbar" id="navbar">
-            <ul class="navbar-content">
-                <li class="list-navbar">Commandes git</li>
-                <li class="list-navbar">UML</li>
-                <li class="list-navbar">Merise</li>
-                <li>
-                    <ul class="btn-container-navbar">
-                        <li class="list-navbar">
-                            <button>
-                                <i class="fa-solid fa-question"></i>
-                            </button>
-                        </li>
-                        <li class="list-navbar">
-                            <button onclick="setDarkMode()">                    
-                                <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <div class="navbar__closing" id="navbar-closing">
+            <nav class="navbar" id="navbar">
+                <ul class="navbar-content">
+                    <li class="list-navbar"><a href="/html/github-commands.html">Commandes git</a></li>
+                    <li class="list-navbar"><a href="/html/uml-diagram.html">UML</a></li>
+                    <li class="list-navbar"><a href="/html/merise.html">Merise</a></li>
+                    <li>
+                        <ul class="btn-container-navbar">
+                            <li class="list-navbar">
+                                <button aria-label="À propos" onclick="openPopUp()">
+                                    <i class="fa-solid fa-question"></i>
+                                </button>
+                            </li>
+                            <li class="list-navbar">
+                                <button onclick="setDarkMode()" aria-label="Dark mode">
+                                    <i id="icon-dark-mode" class="fa-solid fa-moon"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
+    <div id="about-popup" class="about-popup">
+        <button class="popup__close-btn" onclick="closePopUp()"><i class="fa-solid fa-x"></i></button>
+        <div class="popup__content">
+            <p class="m-y-1">Qui suis-je ?</p>
+            <p>
+                Théo.
+                <br>
+                21 ans.
+                <br>
+                Développeur junior.
+                <br>
+                En formation CDA.
+                <br>
+                En recherche de stage.
+                <br>
+                Orienté Full-stack JavaScript, TypeScript.
+            </p>
+            <div class="flex justify-center m-y-1 popup__link__item">
+                <a target="_blank" href="https://github.com/Theo02-12">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/th%C3%A9o-couvelard-4089111b5/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div class="hero-section">
         <!--HERO SECTION PAGE-->
-        <h2>Bienvenue sur mon Wiki Perso !</h2>
+        <h1>Bienvenue sur mon Wiki Perso !</h1>
         <p style="font-size: 18px; margin-bottom: 10px;">Vous y retrouverez sur ce site: </p>
         <div class="hero-items-container">
 
