@@ -132,7 +132,6 @@ button {
 .title-button a {
   font-size: 30px;
   font-weight: bold;
-  z-index: 10;
 }
 
 .list-navbar {
@@ -305,6 +304,9 @@ pre {
   .diagram-img {
     max-width: 40%;
     margin: 0 20px 0 0;
+  }
+  .title-button a {
+    z-index: 10;
   }
 }
 
