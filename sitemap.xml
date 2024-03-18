@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://www.example.com/index.html</loc>
+      <lastmod>2024-03-18</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+   </url>
+   <url>
+      <loc>https://www.example.com/github-commands.html</loc>
+      <lastmod>2024-03-17</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1</priority>
+   </url>
+   <url>
+      <loc>https://www.example.com/uml-diagram.html</loc>
+      <lastmod>2024-03-17</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1</priority>
+   </url>
+   <url>
+      <loc>https://www.example.com/merise.html</loc>
+      <lastmod>2024-03-17</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+   </url>
+</urlset>
