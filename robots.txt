@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /*?
+Allow: /
+
+Sitemap: https://2024-cda-boulogne.github.io/wiki-perso-tco/sitemap.xml
