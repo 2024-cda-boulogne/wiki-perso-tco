@@ -72,11 +72,6 @@ header .title-button a {
   font-size: 30px;
   font-weight: bold;
 }
-@media (min-width: 728px) {
-  header .title-button a {
-    z-index: 5;
-  }
-}
 header .navbar-button {
   z-index: 1;
 }
@@ -274,9 +269,10 @@ pre {
 }
 
 .about-popup {
-  backdrop-filter: blur(15px);
   width: 100vw;
   height: 100vh;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px) !important;
   position: fixed;
   top: 0;
   left: 0;
